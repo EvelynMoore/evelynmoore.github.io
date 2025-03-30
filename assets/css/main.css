@@ -3321,9 +3321,13 @@ body.is-touch .tiles article .content {
 	}
 }
 
-@media screen and (min-width: 981px) {
+.mobile-only {
+	display: none;
+}
+
+@media screen and (max-width: 980px) {
 	.mobile-only {
-		display: none !important;
+		display: block;
 	}
 }
 
