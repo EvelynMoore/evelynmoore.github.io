@@ -2753,11 +2753,6 @@ input, select, textarea {
 }
 
 /* Hover effects */
-body:not(.is-touch) .tiles article:hover .tech-icons {
-	opacity: 1;
-	transform: translateY(0);
-}
-
 body:not(.is-touch) .tiles article:hover > .image {
 	-moz-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
@@ -2785,7 +2780,22 @@ body:not(.is-touch) .tiles article:hover .content {
 }
 */
 
-body:not(.is-touch) .tiles article:hover .tech-icons img {
+.tiles article:hover .tech-icons {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+body:not(.is-touch) .tiles article .tech-icons {
+    opacity: 0;
+    transform: translateY(0.8em);
+}
+
+body:not(.is-touch) .tiles article:hover .tech-icons {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tiles article .tech-icons img {
 	filter: grayscale(0) brightness(1);
 }
 
