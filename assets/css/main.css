@@ -3291,6 +3291,26 @@ body.is-touch .tiles article .content {
 		filter: grayscale(0) brightness(1);
 	}
 
+/* Hide mobile image by default */
+.mobile-image {
+	display: none;
+}
+
+/* On mobile, hide wide images and show mobile images */
+@media screen and (max-width: 980px) {
+	.tiles article.wide {
+		grid-column: span 1;
+	}
+
+	.wide-image {
+		display: none;
+	}
+
+	.mobile-image {
+		display: block;
+	}
+}
+
 /* Footer */
 
 	#footer {
