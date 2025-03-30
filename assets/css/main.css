@@ -3293,7 +3293,7 @@ body.is-touch .tiles article .content {
 
 /* Hide mobile image by default */
 .mobile-image {
-	display: none;
+	display: none !important;
 }
 
 /* On mobile, hide wide images and show mobile images */
@@ -3303,11 +3303,11 @@ body.is-touch .tiles article .content {
 	}
 
 	.wide-image {
-		display: none;
+		display: none !important;
 	}
 
 	.mobile-image {
-		display: block;
+		display: block !important;
 	}
 }
 
