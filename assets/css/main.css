@@ -3317,8 +3317,8 @@ body.is-touch .tiles article .content {
 
 @media (max-width: 980px) {
 	.tiles article .tech-icons img {
-		width: 32px;
-		height: 32px;
+		width: 32px !important;
+		height: 32px !important;
 		background: red;
 	}
 }
