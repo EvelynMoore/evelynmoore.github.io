@@ -3396,6 +3396,34 @@ body.is-touch .tilesW article .content {
 
 		}
 
+/* Tech icons styling */
+	.tech-icons {
+		display: flex;
+		justify-content: center;
+		gap: 0.5em;
+		margin-top: 0.5em;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.tech-icons img {
+		width: 64px;
+		height: 64px;
+		object-fit: contain;
+		filter: grayscale(100%) brightness(1.5);
+		transition: filter 0.3s ease;
+	}
+
+	/* Show tech icons on hover */
+	body:not(.is-touch) .tiles article:hover .tech-icons {
+		opacity: 1;
+	}
+
+	/* Add color to icons on hover */
+	body:not(.is-touch) .tiles article:hover .tech-icons img {
+		filter: grayscale(0) brightness(1);
+	}
+
 /* Footer */
 
 	#footer {
