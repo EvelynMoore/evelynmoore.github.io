@@ -2732,7 +2732,7 @@ input, select, textarea {
 			transition: opacity 0.3s ease, transform 0.3s ease;
 		}
 
-		/* Tech icons styling */
+		/* Tech icons styling
 		.tiles article.wide .tech-icons {
 			display: flex;
 			justify-content: center;
@@ -2742,14 +2742,15 @@ input, select, textarea {
 			transform: translateY(7.0em);
 			transition: opacity 0.2s ease, transform 0.3s ease;
 		}
+*/
 
-		.tiles article .tech-icons img {
-			width: 64px;
-			height: 64px;
-			object-fit: contain;
-			filter: grayscale(100%) brightness(1.5);
-			transition: filter 0.3s ease;
-		}
+.tiles article .tech-icons img {
+	width: 64px;
+	height: 64px;
+	object-fit: contain;
+	filter: grayscale(100%) brightness(1.5);
+	transition: filter 0.3s ease;
+}
 
 /* Hover effects */
 body:not(.is-touch) .tiles article:hover .tech-icons {
@@ -2778,14 +2779,15 @@ body:not(.is-touch) .tiles article:hover .content {
 	opacity: 1;
 }
 
-body:not(.is-touch) .tiles article.wide:hover .tech-icons {
+/*body:not(.is-touch) .tiles article.wide:hover .tech-icons {
 	opacity: 1;
 	transform: translateY(5.0em);
 }
+*/
 
-	body:not(.is-touch) .tiles article:hover .tech-icons img {
-		filter: grayscale(0) brightness(1);
-	}
+body:not(.is-touch) .tiles article:hover .tech-icons img {
+	filter: grayscale(0) brightness(1);
+}
 
 /* Responsive adjustments */
 @media screen and (max-width: 1280px) {
