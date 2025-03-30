@@ -3310,6 +3310,15 @@ body.is-touch .tiles article .content {
 	.mobile-image {
 		display: block !important;
 	}
+
+.desktop-only {
+	display: block;
+}
+
+@media screen and (max-width: 980px) {
+	.desktop-only {
+		display: none !important;
+	}
 }
 
 /* Footer */
