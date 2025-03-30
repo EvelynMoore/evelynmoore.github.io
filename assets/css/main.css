@@ -2727,29 +2727,126 @@ input, select, textarea {
 			justify-content: center;
 			gap: 0.5em;
 			margin-top: 0.5em;
-			opacity: 0;
-			transform: translateY(0.8em);
+			opacity: 1;
+			transform: translateY(0);
 			transition: opacity 0.3s ease, transform 0.3s ease;
 		}
 
-		/* Tech icons styling
-		.tiles article.wide .tech-icons {
-			display: flex;
-			justify-content: center;
-			gap: 0.5em;
-			margin-top: 0.5em;
-			opacity: 0;
-			transform: translateY(7.0em);
-			transition: opacity 0.2s ease, transform 0.3s ease;
-		}
-*/
+			.tiles article .tech-icons img {
+				width: 64px;
+				height: 64px;
+				object-fit: contain;
+				filter: grayscale(0) brightness(1);
+				transition: filter 0.3s ease;
+			}
 
-.tiles article .tech-icons img {
-	width: 64px;
-	height: 64px;
-	object-fit: contain;
-	filter: grayscale(100%) brightness(1.5);
-	transition: filter 0.3s ease;
+/* Tech icon Hover effects - only for non-touch devices */
+body:not(.is-touch) .tiles article .tech-icons {
+	opacity: 0;
+	transform: translateY(0.8em);
+}
+
+body:not(.is-touch) .tiles article:hover .tech-icons {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Hover effects - only for non-touch devices */
+body:not(.is-touch) .tiles article:hover > .image {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+	opacity: 0.5;
+}
+
+	body:not(.is-touch) .tiles article:hover > .image:before {
+		opacity: 0.35;
+	}
+
+	body:not(.is-touch) .tiles article:hover > .image:after {
+		opacity: 0;
+	}
+
+body:not(.is-touch) .tiles article:hover .content {
+	max-height: 15em;
+	opacity: 1;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1280px) {
+	.tiles {
+		gap: 1.25em;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.tiles {
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	}
+
+		.tiles article.wide {
+			grid-column: span 1;
+		}
+}
+
+@media screen and (max-width: 736px) {
+	.tiles {
+		gap: 1.25em;
+	}
+
+		.tiles article:hover > .image {
+			-moz-transform: scale(1.0);
+			-webkit-transform: scale(1.0);
+			-ms-transform: scale(1.0);
+			transform: scale(1.0);
+		}
+}
+
+@media screen and (max-width: 480px) {
+	.tiles {
+		display: block;
+	}
+
+		.tiles article {
+			margin: 1.25em 0 0 0;
+			width: 100%;
+		}
+}
+
+/* Preload state */
+body.is-preload .tiles article {
+	-moz-transform: scale(0.9);
+	-webkit-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+	opacity: 0;
+}
+
+/* Tech icons styling for all devices */
+.tech-icons {
+	display: flex;
+	justify-content: center;
+	gap: 0.5em;
+	margin-top: 0.5em;
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+	.tech-icons img {
+		width: 64px;
+		height: 64px;
+		object-fit: contain;
+		filter: grayscale(0) brightness(1);
+	}
+
+/* Only apply hover effects to non-touch devices */
+body:not(.is-touch) .tech-icons {
+	opacity: 0;
+}
+
+body:not(.is-touch) .tiles article:hover .tech-icons {
+	opacity: 1;
 }
 
 /* Hover effects */
@@ -2772,31 +2869,6 @@ body:not(.is-touch) .tiles article:hover > .image {
 body:not(.is-touch) .tiles article:hover .content {
 	max-height: 15em;
 	opacity: 1;
-}
-
-/*body:not(.is-touch) .tiles article.wide:hover .tech-icons {
-	opacity: 1;
-	transform: translateY(5.0em);
-}
-*/
-
-.tiles article:hover .tech-icons {
-	opacity: 1;
-	transform: translateY(0);
-}
-
-body:not(.is-touch) .tiles article .tech-icons {
-    opacity: 0;
-    transform: translateY(0.8em);
-}
-
-body:not(.is-touch) .tiles article:hover .tech-icons {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.tiles article .tech-icons img {
-	filter: grayscale(0) brightness(1);
 }
 
 /* Responsive adjustments */
