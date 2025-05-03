@@ -43,13 +43,21 @@
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                <h1>Seasons of the Solar System</h1>
+                <div class="header-container">
+                    <h1>Seasons of the Solar System</h1>
+                    <div class="text-boxes">
+                        <div class="text-box">Blender</div>
+                        <div class="text-box">Animation</div>
+                        <div class="text-box">Uni Assignment</div>
+                        <div class="text-box">Solo Project</div>
+                    </div>
+                </div>
                 <p></p>
-                <p>A creative visualisation to teach about the seasons on each of the planets in the solar system, completed for a university assignment.</p>
+                <p>A creative visualisation to teach about the seasons on each of the planets in the solar system, completed for a university assignment. The time it takes to travel between each planet is shown to scale, as are the sizes and rotation speeds of each planet.</p>
                 <div class="video-container">
                     <iframe width="1132" height="637" src="https://www.youtube.com/embed/Y-7cRMUDVYw" title="Seasons of the Solar System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <p>I created shaders and used NASA textures for each of the planets, and created a shader for the stars.</p>
+                <p>The planets and sun use textures from NASA, and some planets, such as the Earth, required me to make special shaders (The Earth's shader interpolates between two textures based on the light reaching the surface, so at night the cities light up!).</p>
                 <span class="image main"><img src="images/EarthRender5.jpg" alt="" /></span>
                 <p>I am very proud of the level of visual quality I managed to achieve, in no small part thanks to Blender's excellent usability and renderer.</p>
                 <span class="image main"><img src="images/SaturnRefComparison.jpg" alt="First Aid" style="width: 100%; max-width: 900px; height: auto; object-fit: cover;" /></span>
@@ -60,6 +68,7 @@
                 <span class="image main"><img src="images/AudioTimeline.jpg" alt="" /></span>
                 <p>A copy of the Design Documentation for the project can be found <a href="Seasons of the Solar System Design Doc.pdf">here.</a></p>
                 <span class="image main"><img src="images/VenusRender.jpg" alt="" /></span>
+                <p>I realised late in the project that pluto was so far away from the world origin that it was having some visual bugs due to floating point precision. It was too late to fix but is a good example of the overlapping of knowledge from programming to art and design.</p>
             </div>
         </div>
 

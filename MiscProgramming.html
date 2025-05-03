@@ -6,13 +6,13 @@
 -->
 <html>
 <head>
-    <title>Boids</title>
+    <title>Misc Programming</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body class="is-preload" style="background-image: url('images/FishBoids2.jpg');">
+<body class="is-preload" style="background-image: url('images/MiscProgrammingBackground.webp');">
     <!-- Wrapper -->
     <div id="wrapper">
 
@@ -44,35 +44,31 @@
         <div id="main">
             <div class="inner">
                 <div class="header-container">
-                    <h1>Compute Shader Fish Simulation</h1>
+                    <h1>Unity Rope System</h1>
                     <div class="text-boxes">
-                        <div class="text-box">Unity 6 - HLSL & C#</div>
-                        <div class="text-box">Shader Programming</div>
+                        <div class="text-box">Unity - C#</div>
+                        <div class="text-box">Programming</div>
                         <div class="text-box">Personal Project</div>
                         <div class="text-box">Solo Project</div>
                     </div>
                 </div>
-                <p>I created this boids simulation in Unity 6 as part of my journey learning compute shaders. It was a great stepping stone towards being able to implement complex logic efficiently in compute shaders. I also created shader graphs to give the fish different accent colours, and animate the fish to look as though they were swimming.</p>
+                <p>One week our lecturer showed us a rope system he had created and I thought it was very satisfying so I resolved to create my own. I ended up adding even more features than the version my lecturer made, including being able to undo the rope and making it respect gravity.</p>
                 <div class="video-container">
-                    <iframe width="1132" height="637" src="https://www.youtube.com/embed/po3YuKEoqvI" title="Relaxing Underwater Simulation - 10 Minute Timer with Alarm" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="1132" height="637" src="https://www.youtube.com/embed/1VnrWH9wgO4" title="Unity Rope System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <p>Over 8000 fish are simulated in the above video. I would have liked even more, and to this end I implemented GPU instancing. Some information had to be passed from the compute shader through to the vertex and fragment shader, which proved quite challenging alongside the GPU instancing. It turns out that the instancing didn't improve performance at all, because the main thing holding the simulation back is a lack of spacial partitioning.</p>
-                <span class="image main"><img src="images/FishBoids1.jpg" alt="A simulation of many thousands of fish underwater, with a shark wandering through the shoals." /></span>
-                <p>I also modelled, unwrapped and textured the fish and shark, to gain a bit more experience with the texturing workflow in Blender.</p>
                 <div class="header-container">
-                    <h1>Unreal Engine Boids</h1>
+                    <h1>Vehicle Building System</h1>
                     <div class="text-boxes">
-                        <div class="text-box">Unreal 4 - C++</div>
+                        <div class="text-box">Unity - C#</div>
                         <div class="text-box">Programming</div>
                         <div class="text-box">Uni Assignment</div>
                         <div class="text-box">Solo Project</div>
                     </div>
                 </div>
-                <p>My first introduction to the boids algorithm was during a university module in 2023, where we used it as a task to progress our understanding of Unreal Engine. I am proud of the progress I have made since doing this module, especially with the integration of art and finishing touches on projects.</p>
+                <p>I created this vehicle building system for a university assignment. I was originally planning to do a system similar to those found in games such as Besiege, Space Engineers, and Minecraft, where the builidng is locked to a grid system which doesn't allow much detail. Eventually I ambitiously decided to try and recreate the more advanced system found in Crossout, Where items can be any shape including concave shapes, and they fit to a small grid system but need to check for intersections outside of the grid system as well.</p>
                 <div class="video-container">
-                    <iframe width="1132" height="637" src="https://www.youtube.com/embed/C8DxTLWo2Q0" title="Unreal 4 Boids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="1132" height="637" src="https://www.youtube.com/embed/CzyLkLMy4ZU" title="Unity Vehicle Building System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <p>I created this implementation for an assignment using C++ and Blueprints. Many factors affecting the behaviour of the boids can be edited with sliders, such as the weightings of separation, cohesion and alignment.</p>
             </div>
         </div>
 

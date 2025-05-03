@@ -43,15 +43,23 @@
 			<!-- Main -->
 			<div id="main">
 				<div class="inner">
-					<h1>AI Pond Life Simulation</h1>
+					<div class="header-container">
+						<h1>AI Pond Life Simulation</h1>
+						<div class="text-boxes">
+							<div class="text-box">Unity - C#</div>
+							<div class="text-box">Programming</div>
+							<div class="text-box">Uni Assignment</div>
+							<div class="text-box">Solo Project</div>
+						</div>
+					</div>
 					<p></p>
-					<p>Using Unity, Two different AI agents are simulated - a Utility AI (with wants and needs like The Sims), and a behavior tree AI.</p>
+					<p>Using Unity, Two different AI agents are simulated - a Utility AI (with wants and needs like The Sims), and a behaviour tree AI.</p>
 					<p>The prey agents eat the green food, and the predator agents eat the prey - the prey birth live young whereas the predators lay eggs which the prey can eat. Prey agents exhibit emergent flocking behavior, and both types of agent pass down genes, which can mutate, to their young.</p>
 					<div class="video-container">
 						<iframe width="1132" height="637" src="https://www.youtube.com/embed/kDctOyKLJqY" title="Pond Life Simulation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					</div>
-					<p>Both species detect the world around them using a vision cone which is affected by the fog level at their current position (shown by the green fog). Predators also have a "heat-vision", whereas prey instead have a kind of "sonar ping".</p>
-					<img src="images/AIDetection.jpg" alt="" style="width: 800px; height: 400px; object-fit: cover;" />
+					<p>Both species detect the world around them using a vision cone which is affected by the fog level at their current position (shown by the green fog). Predators also have a "heat-vision", whereas prey instead have a kind of "sonar ping". The heat vision allows predators to see prey outside of their vision cone, but not with perfect accuracy. The sonar ping is an ability that causes the prey to lose some health but reveals all predators and food within the radius of the ping.</p>
+					<span class="image main"><img src="images/AIDetection.jpg" alt="" /></span>
 					<p>The populations of each species are plotted over time on a graph.</p>
 					<img src="images/PopSimGraph.jpg" alt="" style="width: 340px; height: 340px; object-fit: cover;" />
 				</div>

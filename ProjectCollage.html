@@ -11,49 +11,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Mobile-specific styles */
+        @media screen and (max-width: 736px) {
+            .swipe-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                overflow: auto;
+                -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+                touch-action: pan-y; /* Enable vertical panning */
+            }
+
+            .swipe-image {
+                width: auto;
+                height: auto;
+                max-width: none;
+                max-height: none;
+                min-width: 100vw;
+                min-height: 100vh;
+                object-fit: none;
+            }
+        }
+
+        /* Desktop styles */
+        @media screen and (min-width: 737px) {
+            .swipe-image {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
+                z-index: -1;
+            }
+        }
+    </style>
 </head>
-<body class="is-preload";">
+<body class="is-preload">
 
-        <!-- Header -->
-        <header id="header">
-            <div class="inner">
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
 
-                <!-- Nav -->
-                <nav>
-                    <ul>
-                        <li><a href="#menu">Menu</a></li>
-                    </ul>
-                </nav>
+            <!-- Nav -->
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
 
-            </div>
-        </header>
+        </div>
+    </header>
 
-        <!-- Menu -->
-        <nav id="menu">
-            <h2>Menu</h2>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="TTOdyssey.html">Internship</a></li>
-                <li><a href="CV.pdf">CV</a></li>
-                <li><a href="ProjectCollage.html">Collage of Projects</a></li>
-            </ul>
-        </nav>
+    <!-- Menu -->
+    <nav id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="TTOdyssey.html">Internship</a></li>
+            <li><a href="CV.pdf">CV</a></li>
+            <li><a href="ProjectCollage.html">Collage of Projects</a></li>
+        </ul>
+    </nav>
 
-        <!-- Main -->
-        <div id="main">
-            <div class="inner">
-                <img src="images/IndexBackgroundFull.jpg"
-                     style="
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        width: 100vw;
-                        height: 100vh;
-                        object-fit: cover;
-                        z-index: -1;
-                        ">
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <div class="swipe-container">
+                <img src="images/IndexBackgroundFull.jpg" class="swipe-image" alt="Project Collage">
             </div>
         </div>
+    </div>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>

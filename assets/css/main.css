@@ -2370,18 +2370,78 @@ input, select, textarea {
 
 			}
 
-	/*Background Image*/
-	body {
-		background-image: url('../images/your-background-image.jpg');
-		background-attachment: fixed;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+	/* Background Image - Desktop Only */
+	@media screen and (min-width: 737px) {
+		body {
+			background-image: url('../images/your-background-image.jpg');
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	
+		/* Optional overlay for better readability */
+		#wrapper {
+			background-color: rgba(0, 0, 0, 0.85);
+		}
+	}
+
+	/* Remove background on mobile */
+	@media screen and (max-width: 736px) {
+		body {
+			background-image: none !important;
+			background-color: #000000 !important; /* Fallback to solid black */
+		}
+	
+		#wrapper {
+			background-color: transparent; /* Remove overlay on mobile */
+		}
+	}
+
+	.text-boxes {
+		display: grid;
+		grid-template-columns: repeat(2, auto); /* Creates 2 columns */
+		gap: 0.5em; /* Reduced gap for tighter spacing */
 	}
 	
-	/* Optional overlay for better readability */
-	#wrapper {
-		background-color: rgba(0, 0, 0, 0.85);
+	.text-box {
+		background: black;
+		color: white;
+		border-radius: 12px;
+		border: 3px solid #ffffff;
+		padding: 0.25em 0.5em;
+		white-space: nowrap;
+		text-align: center; /* Centers text in the box */
+		min-width: fit-content; /* Makes boxes only as wide as needed */
+	}
+	
+	.header-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		margin-bottom: 1em;
+		gap: 1em; /* Ensures space between title and boxes */
+	}
+	
+	/* Mobile responsiveness */
+	@media screen and (max-width: 736px) {
+		.header-container {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1em;
+		}
+	
+		.text-boxes {
+			width: 100%;
+			grid-template-columns: repeat(2, 1fr); /* Full width 2-column grid */
+		}
+	}
+	
+	/* For very small screens - stack vertically */
+	@media screen and (max-width: 480px) {
+		.text-boxes {
+			grid-template-columns: 1fr; /* Single column */
+		}
 	}
 
 /* Table */
