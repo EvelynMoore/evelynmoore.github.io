@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body class="is-preload">
+<body class="is-preload" style="background-image: url('images/FishBoids2.jpg');">
     <!-- Wrapper -->
     <div id="wrapper">
 
@@ -43,12 +43,20 @@
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                <h1>Boids</h1>
-                <p>Boids, or Bird-oid objects, refers to an algorithm for simulating the flocking of birds/shoals of fish swimming.</p>
+                <h1>Compute Shader Fish Simulation</h1>
+                <p>I created this boids simulation in Unity 6 as part of my journey learning compute shaders. It was a great stepping stone towards being able to implement complex logic efficiently in compute shaders. I also created shadergraphs to give the fish different accent colours, and animate the fish to look as though they were swimming.</p>
+                <div class="video-container">
+                    <iframe width="1132" height="637" src="https://www.youtube.com/embed/po3YuKEoqvI" title="Relaxing Underwater Simulation - 10 Minute Timer with Alarm" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p>Over 8000 fish are simulated in the above video. I would have liked even more, and to this end I implemented GPU instancing. Some information had to be passed from the compute shader through to the vertex and fragment shader, which proved quite challenging alongside the GPU instancing. It turns out that the instancing didn't improve performance at all, because the main thing holding the simulation back is a lack of spacial partitioning.</p>
+                <span class="image main"><img src="images/FishBoids1.jpg" alt="A simulation of many thousands of fish underwater, with a shark wandering through the shoals." /></span>
+                <p>I also modelled, unwrapped and textured the fish and shark, to gain a bit more experience with the texturing workflow in Blender.</p>
+                <h1>Unreal Engine Boids</h1>
+                <p>My first introduction to the boids algorithm was during a university module in 2023, where we used it as a task to progress our understanding of Unreal Engine. I am proud of the progress I have made since doing this module, especially with the integration of art and finishing touches on projects.</p>
                 <div class="video-container">
                     <iframe width="1132" height="637" src="https://www.youtube.com/embed/C8DxTLWo2Q0" title="Unreal 4 Boids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <p>I created this implementation for a university assignment using Unreal 4.</p>
+                <p>I created this implementation for an assignment using C++ and Blueprints. Many factors affecting the behaviour of the boids can be edited with sliders, such as the weightings of separation, cohesion and alignment.</p>
             </div>
         </div>
 
