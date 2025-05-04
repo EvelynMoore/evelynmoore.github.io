@@ -55,16 +55,16 @@
         }
 
         /* Remove default margins/paddings */
-        body, html {
+        /*body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             overflow: hidden;
-        }
+        }*/
 
         /* Ensure main container doesn't interfere */
-        #main {
+        /*#main {
             position: fixed;
             top: 0;
             left: 0;
@@ -78,7 +78,7 @@
             height: 100%;
             padding: 0 !important;
             margin: 0 !important;
-        }
+        }*/
     </style>
 </head>
 <body class="is-preload">
@@ -125,7 +125,7 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-        // Optional: Add touch event listeners for better control
+        //Add touch event listeners for better control
         document.addEventListener('DOMContentLoaded', function () {
             if (window.innerWidth <= 736) { // Only for mobile
                 const container = document.querySelector('.swipe-container');
@@ -153,5 +153,6 @@
             }
         });
     </script>
+    <a href="index.html" class="floating-home-button"><img src="Images/HomeIcon.svg" alt="Home" /></a>
 </body>
 </html>
