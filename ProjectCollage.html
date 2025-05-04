@@ -22,7 +22,7 @@
                 height: 100vh;
                 overflow: auto;
                 -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
-                touch-action: pan-y; /* Enable vertical panning */
+                touch-action: pan-y pan-x; /* Enable both vertical and horizontal panning */
             }
 
             .swipe-image {
@@ -30,9 +30,14 @@
                 height: auto;
                 max-width: none;
                 max-height: none;
-                min-width: 100vw;
-                min-height: 100vh;
-                object-fit: none;
+                min-width: 100%;
+                min-height: 100%;
+                display: block; /* Ensure no extra space around image */
+            }
+
+            /* Disable pull-to-refresh */
+            body {
+                overscroll-behavior: contain;
             }
         }
 
@@ -47,6 +52,32 @@
                 object-fit: cover;
                 z-index: -1;
             }
+        }
+
+        /* Remove default margins/paddings */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Ensure main container doesn't interfere */
+        #main {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .inner {
+            height: 100%;
+            padding: 0 !important;
+            margin: 0 !important;
         }
     </style>
 </head>
@@ -92,5 +123,35 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+        // Optional: Add touch event listeners for better control
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.innerWidth <= 736) { // Only for mobile
+                const container = document.querySelector('.swipe-container');
+                const image = document.querySelector('.swipe-image');
+
+                // Make sure the image is large enough to scroll
+                image.onload = function () {
+                    if (image.naturalWidth < window.innerWidth || image.naturalHeight < window.innerHeight) {
+                        // If image is smaller than viewport, center it
+                        container.style.overflow = 'hidden';
+                        image.style.minWidth = 'auto';
+                        image.style.minHeight = 'auto';
+                        image.style.maxWidth = '100%';
+                        image.style.maxHeight = '100%';
+                        image.style.objectFit = 'contain';
+                        image.style.margin = 'auto';
+                        image.style.display = 'block';
+                    }
+                };
+
+                // If image is already loaded (cached)
+                if (image.complete) {
+                    image.onload();
+                }
+            }
+        });
+    </script>
 </body>
 </html>
