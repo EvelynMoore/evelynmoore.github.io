@@ -201,6 +201,7 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 		text-transform: uppercase;
 		letter-spacing: 0.35em;
+		position: relative;
 	}
 
 		h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -209,6 +210,19 @@ input, select, textarea {
 
 	h2 {
 		font-size: 1.1em;
+	}
+
+	h2::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, .7); /* Soft dark overlay */
+		border-radius: 0.2em;
+		z-index: -1; /* Behind the text */
+		filter: blur(12px); /* Makes the shadow soft */
 	}
 
 	h3 {
