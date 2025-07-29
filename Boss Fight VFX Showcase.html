@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>VFX Showcase - Boss Fight</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload" style="background-image: url('images/Dancebrawler3.jpg');">
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+
+					<!-- Nav -->
+					<nav>
+						<ul>
+							<li><a href="#menu">Menu</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="TTOdyssey.html">Internship</a></li>
+					<li><a href="CV.pdf">CV</a></li>
+					<li><a href="ProjectCollage.html">Collage of Projects</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					<div class="header-container">
+						<h1>Unity VFX Showcase</h1>
+						<div class="text-boxes">
+							<div class="text-box">Unity - Shadergraph, VFX Graph</div>
+							<div class="text-box">Realtime Visual Effects</div>
+							<div class="text-box">Personal Project</div>
+							<div class="text-box">Solo Project</div>
+						</div>
+					</div>
+					<p>A boss fight mockup that I created to gain more experience with Unity's Visual Effect Graph. The main effect is a meteorite explosion with a shockwave that ripples through the ground, which was created with ShaderGraph, VFX Graph, and Material Maker.</p>
+					<p></p>
+					<div class="video-container">
+						<iframe width="1236" height="695" src="https://www.youtube.com/embed/fILyHPYmfEM" title="Boss Fight VFX Showcase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+					<p>The Parallax Occlusion Mapping node is used to give the cracks in the ground the appearance of being 3-dimensional without having to render additional geometry.</p>
+					<span class="image main"><img src="images/BossFight4.jpg" alt="" /></span>
+					<p>The meteorite itself consists of the rocky core, which was created in Blender, a spherical, firey shell around it, created with Shadergraph, and a trail consisting of 3 particles: flames, smoke, and sparks.</p>
+					<span class="image main"><img src="images/BossFight1.jpg" alt="" /></span>
+					<p>I used FMOD for the sound effects as the 3D sound attenuation makes the meteorite explosion sound immersive and powerful, and means the player can tell where the danger is without having to look.</p>
+					<span class="image main"><img src="images/BossFight3.jpg" alt="" /></span>
+					<p>To allow the particles around the boss to be affected by the fog, I created a custom shader graph for them, integrated with their VFX graph.</p>
+					<span class="image main"><img src="images/BossFight2.jpg" alt="" /></span>
+					<p></p>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<section>
+						<h2>Get in touch</h2>
+						<p>
+							Email:		evmoore2022@gmail.com <br>
+							Linkedin:	linkedin.com/in/evelyn-moore-gamedev<br>
+						</p>
+					</section>
+					<ul class="copyright">
+						<li>&copy; Evelyn Moore. All rights reserved</li>
+						<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<a href="index.html" class="floating-home-button"><img src="images/HomeIcon.svg" alt="Home" /></a>
+	</body>
+</html>
